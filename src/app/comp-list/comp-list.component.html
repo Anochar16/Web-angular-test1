@@ -1,27 +1,21 @@
 <p-table [value]="foods">
     <ng-template pTemplate="header">
         <tr>
-            <th style="width: 30%;">Name</th>
-            <th style="width: 40%;">Detail</th>
-            <th style="padding-left: 20%; "><button pButton type="button" label="Add"
-                 class="p-button-secondary"></button>
-            </th>
+            <th>Name</th>
+            <th></th>
+
     </ng-template>
-    <ng-template pTemplate="body" let-food let-product let-editing="editing" let-ri="rowIndex">
+    <ng-template pTemplate="body" let-food>
         <tr>
-            <td>{{food.name}}</td>
-            <td>{{food.foodDetail}}</td>
-            <td style=" text-align: left;">
-                <div class="flex align-items-center justify-content-center gap-2">
-                    <button *ngIf="!editing" pButton  type="button" label="Complete"
-                    class="p-button-text"></button>
+            <td>{{food}}</td>
+            <td style=" text-align: center;">
+                <button pButton type="button" class="p-button-text" label="Add" (click)="onclickAdd(food)"
+                    style="color: rgb(64, 0, 255);"></button>
 
-                    <button *ngIf="!editing" pButton  type="button" label="Delete"
-                    class="p-button-text" style="color:red;"></button>
+                <button pButton type="button" class="p-button-text" label="Delete" (click)="onclickDelete(food)"
+                    style="color: red;"></button>
 
-                </div>
             </td>
-
 
         </tr>
     </ng-template>

@@ -8,19 +8,23 @@ import { AddFoodComponent } from './add-food/add-food.component';
 import { CompListComponent } from './comp-list/comp-list.component';
 import { FormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import { DialogModule } from 'primeng/dialog';
-import { Route } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { OrderComponent } from './order/order.component';
+import { DrinkListComponent } from './drink-list/drink-list.component';
+import { DessertListComponent } from './dessert-list/dessert-list.component';
+
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddFoodComponent, CompListComponent
+    AddFoodComponent, CompListComponent, HomeComponent, OrderComponent, DrinkListComponent, DessertListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
-    , TabViewModule, TableModule, FormsModule, ButtonModule, DialogModule],
+    , TabViewModule, TableModule, FormsModule, ButtonModule],
   providers: [],
   bootstrap: [AppComponent]
 })

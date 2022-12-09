@@ -1,0 +1,17 @@
+<div><p-tabView>
+        <p-tabPanel header="Food">
+            <app-add-food (AddFoodEvent)="addFoodEvent2($event)"></app-add-food>
+            <app-comp-list [AddFood]="fwafood" (FoodEvent)="addFoodEvent($event)"></app-comp-list>
+        </p-tabPanel>
+        <p-tabPanel header="Dessert">
+            <app-add-food (AddFoodEvent)="addFoodEvent4($event)"></app-add-food>
+            <app-dessert-list [AddDessert]="fwdessert" (dessertEvent)="addFoodEvent($event)"></app-dessert-list>
+        </p-tabPanel>
+        <p-tabPanel header="Drink">
+            <app-add-food (AddFoodEvent)="addFoodEvent3($event)"></app-add-food>
+            <app-drink-list [AddDrink]="fwdrink" (drinkEvent)="addFoodEvent($event)"></app-drink-list>
+        </p-tabPanel>
+        <p-tabPanel header="Order">
+            <app-order [foodEvent]="foods" [DrinkEvent]="foods" [DessertEvent]="foods"></app-order>
+        </p-tabPanel>
+    </p-tabView></div>
